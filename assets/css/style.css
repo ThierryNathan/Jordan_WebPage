@@ -2,6 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Mate:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&family=Mate+SC&family=Mate:ital@0;1&display=swap');
 
+:root
+{
+    --color-laranja: #F15924;
+    --color-vermelho: #941721;
+    --color-marrom: #422E1D;
+    --color-preto: #070707;
+    --color-branco: #F0F0F2;
+
+    --font-titulo: "Mate", serif;
+    --font-subtitulo: "Mate SC", serif;
+    --font-texto: "Life Savers", serif;
+
+    --fontsize-titulo: 3rem;
+    --fontsize-subtitulo: 2.5rem;
+    --fontsize-texto: 1rem;
+}
+
+header
+{
+    height: 100vh;
+}
+
 header::before
 {
     content: "";
@@ -14,26 +36,48 @@ header::before
     z-index: -1;
 }
 
-h1
+header h1
 {
-    color:#F0F0F2;
-    font-size: 48px;
+    color:var(--color-branco);
+    font-size: var(--fontsize-titulo);
     font-weight: 400;
-    font-family: "Mate", serif;
+    font-family: var(--font-titulo);
     font-style: normal;
 }
 
 h2
 {
-    color:#F0F0F2;
-    font-size: 40px;
+    color:var(--color-branco);
+    font-size: var(--fontsize-subtitulo);
     font-weight: 400;
-    font-family: "Mate SC", serif;
+    font-family: var(--font-subtitulo);
     font-style: normal;
 }
-p
-{
 
+#apresentacao
+{
+    display: flex;
+    padding: 4rem;
+    align-items: center;
+}
+
+#apresentacao img
+{
+    border-radius: 50%;
+}
+
+#apresentacaotxt p
+{
+    color: var(--color-preto);
+    font-family: var(--font-texto);
+    font-size: var(--fontsize-texto);
+}
+
+#apresentacaotxt h1
+{
+    color: var(--color-preto);
+    font-family: var(--font-titulo);
+    font-size: var(--fontsize-titulo);
 }
 
   
