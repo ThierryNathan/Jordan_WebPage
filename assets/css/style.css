@@ -16,7 +16,7 @@
 
     --fontsize-titulo: 3rem;
     --fontsize-subtitulo: 2.5rem;
-    --fontsize-texto: 1rem;
+    --fontsize-texto: 2rem;
 }
 
 *
@@ -30,21 +30,24 @@ header
     height: 100vh;
 }
 
-header::before
+header::before 
 {
     content: "";
     background-image: url(../images/header.png);
     background-size: cover;
+    background-position: center; 
     height: 100vh;
     width: 100vw;
     display: block;
     position: absolute;
     z-index: -1;
+    top: 0;
+    left: 0;
 }
 
-header h1
+h1 
 {
-    color:var(--color-branco);
+    color: var(--color-branco);
     font-size: var(--fontsize-titulo);
     font-weight: 400;
     font-family: var(--font-titulo);
@@ -60,11 +63,23 @@ h2
     font-style: normal;
 }
 
+header h1 
+{
+    margin-left: 7%;
+    margin-top: 5%; 
+}
+
+header h2
+{
+    margin-left: 10%;
+}
+
 #apresentacao
 {
     display: flex;
     padding: 4rem;
     align-items: center;
+    background-color: var(--color-branco);
 }
 
 #apresentacao img
@@ -72,8 +87,9 @@ h2
     border-radius: 50%;
 }
 
-#apresentacaotxt p
+#apresentacaotxt
 {
+    margin-left: 3%;
     color: var(--color-preto);
     font-family: var(--font-texto);
     font-size: var(--fontsize-texto);
@@ -86,72 +102,53 @@ h2
     font-size: var(--fontsize-titulo);
 }
 
-#projetos
-{
+#projetos{
     background-color: var(--color-marrom);
-    height: 100wh;
+    height: 100vh;
 }
 
-#projetos ul
-{
+#projetos ul{
+    margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
 }
 
-.card
-{
+.card {
+    margin-top: 80%;
     max-width: 300px;
-    max-height: 420px;
-    overflow: hidden;
+    height: 420px;
     position: relative;
     cursor: pointer;
-    transition: opacity .5s;
-    
-    margin-bottom: 10%;
 }
 
-.image-wrapper
-{
+.image-wrapper {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    margin-top: 20%;
+    transition: opacity .5s;
 }
 
-.image-wrapper img
-{
+.image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card-text
-{
+.card-text {
     position: absolute;
-    top: 80%;
-    left: 5%;
+    top: 30%;
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity .5s, top .5s;
     color: var(--color-branco);
+    margin-top: 80%;
 }
 
-.card-title
-{
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    transition: opacity .5s;
-}
-
-.card:hover .card-text
-{
+.card:hover .card-text {
     opacity: 1;
+    top: 15%
 }
 
-.card:hover .image-wrapper
-{
-    opacity: .8;
+.card:hover .image-wrapper{
+    opacity: .3;
 }
-
-
