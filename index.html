@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordan Webpage</title>
     <link rel="stylesheet" href="assets\css\style.css">
+    <script src="assets\js\script.js" defer></script>
 </head>
 <body>
     <header>
@@ -77,28 +78,21 @@
                 <option value="1" selected>Tênis Air Jordan 1 Low</option>
                 <option value="2">Tênis Jordan Delta 3</option>
                 <option value="3">Tênis Air Jordan Legacy 312 Low</option>
-            </select>
+                </select>
+                <output id="valorTenis">R$: 788.49</output>
             </div>               
             <div class="campo">
-                
                 <div>
                     <label for="cores" id="cores">Escolha a cor:</label>
                     <input type="color" id="cores">
                 </div>
                 <label for="tamanho">Tamanho do tênis</label>
-                <input type="range" min="28" max="47" id="tamanho"> 
-                
+                <input type="range" min="28" max="47" id="tamanho">  
             </div>
-
             
-            <!-- <label for="">teste option</label>
-            <input type="radio" name="teste" id="teste-sim">
-            <label for="teste-sim">sim</label>
-            <input type="radio" name="teste" id="teste-nao">
-            <label for="teste-nao">não</label>
-
-            <input type="checkbox" id="testecheck">
-            <label for="testecheck">testecheck</label> -->
+            <!-- Criar uma imagem que atualiza conforme a escolha do tênis 
+                 Limitar cores para controlar quais cores disponíveis
+            -->
 
         </form>
     </section>
