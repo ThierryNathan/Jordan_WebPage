@@ -161,34 +161,30 @@ header h2
     opacity: .3;
 }
 
-#orcamento
-{
+#orcamento {
     height: 100vh;
     padding: 3rem;
-
 }
-#orcamento h2
-{
-    
+
+#orcamento h2 {
     color: var(--color-preto);
+    text-align: center;
 }
 
-#orcamento form
-{
+#orcamento form{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
     margin: 0 auto;
 }
 
-.campo
-{
+.campo {
     display: flex;
     flex-direction: column;
 }
 
-.linha
-{
+.linha {
     grid-column: 1 / 3;
 }
 
