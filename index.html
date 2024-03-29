@@ -21,6 +21,7 @@
                 Michael Jordan é uma lenda do basquete, amplamente considerado o maior jogador de todos os tempos. Ele ganhou seis títulos da NBA com os Chicago Bulls, além de conquistar o ouro olímpico. Sua influência transcende o esporte, tornando-se um ícone cultural e bem-sucedido empresário.</p>
         </div>
     </section>
+    
     <section id="projetos">
         <ul>
             <li>
@@ -74,25 +75,28 @@
 
             <div class="campo linha">
                 <label for="modelo-tenis">Modelo Tênis:</label>
+
                 <select id="modelo-tenis">
                 <option value="1" selected>Tênis Air Jordan 1 Low</option>
                 <option value="2">Tênis Jordan Delta 3</option>
                 <option value="3">Tênis Air Jordan Legacy 312 Low</option>
                 </select>
-                <output id="valorTenis">R$: 788.49</output>
-            </div>               
-            <div class="campo">
-                <div>
-                    <label for="cores" id="cores">Escolha a cor:</label>
-                    <input type="color" id="cores">
-                </div>
-                <label for="tamanho">Tamanho do tênis</label>
-                <input type="range" min="28" max="47" id="tamanho">  
+        
+                <label>Escolha a cor:</label>
+                    <div class="cores">
+                    <label for="cor-azul" class="cor-azul">Azul</label>
+                    <input type="radio" id="cor-azul" name="cor" value="azul">
+                    
+                    <label for="cor-branco" class="cor-branco">Branco</label>
+                    <input type="radio" id="cor-branco" name="cor" value="branco">
+                    
+                    <label for="cor-vermelho" class="cor-vermelho">Vermelho</label>
+                    <input type="radio" id="cor-vermelho" name="cor" value="vermelho">
+                    </div>
+                <label for="tamanho">Tamanho do tênis: <span id="tamanhoSelecionado">28</span></label>
+                <input type="range" min="28" max="47" id="tamanho"> 
+                <output id="valorTenis">Valor total R$: 788.49</output> 
             </div>
-            
-            <!-- Criar uma imagem que atualiza conforme a escolha do tênis 
-                 Limitar cores para controlar quais cores disponíveis
-            -->
 
         </form>
     </section>
