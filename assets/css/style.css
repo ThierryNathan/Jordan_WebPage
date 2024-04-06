@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Mate:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&family=Mate+SC&family=Mate:ital@0;1&display=swap');
 
-:root
+:root 
 {
     --color-laranja: #F15924;
     --color-vermelho: #941721;
@@ -19,13 +19,15 @@
     --fontsize-texto: 2rem;
 }
 
-*
+* 
 {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     list-style: none;
 }
 
-header
+header 
 {
     height: 100vh;
     margin-bottom: 0%;
@@ -36,9 +38,9 @@ header::before
     content: "";
     background-image: url(../images/header.png);
     background-size: cover;
-    background-position: center; 
-    height: 100vh;
-    width: 100vw;
+    background-position: center;
+    height: 100%;
+    width: 100%;
     display: block;
     position: absolute;
     z-index: -1;
@@ -55,9 +57,9 @@ h1
     font-style: normal;
 }
 
-h2
+h2 
 {
-    color:var(--color-branco);
+    color: var(--color-branco);
     font-size: var(--fontsize-subtitulo);
     font-weight: 400;
     font-family: var(--font-subtitulo);
@@ -67,28 +69,30 @@ h2
 header h1 
 {
     margin-left: 7%;
-    margin-top: 5%; 
+    margin-top: 5%;
 }
 
-header h2
+header h2 
 {
     margin-left: 10%;
 }
 
-#apresentacao
+#apresentacao 
 {
     display: flex;
-    padding: 4rem;
+    padding: 4%;
     align-items: center;
     background-color: var(--color-branco);
 }
 
-#apresentacao img
+#apresentacao img 
 {
     border-radius: 50%;
+    max-width: 100%;
+    height: auto;
 }
 
-#apresentacaotxt
+#apresentacaotxt 
 {
     margin-left: 3%;
     color: var(--color-preto);
@@ -96,76 +100,86 @@ header h2
     font-size: var(--fontsize-texto);
 }
 
-#apresentacaotxt h1
+#apresentacaotxt h1 
 {
     color: var(--color-preto);
     font-family: var(--font-titulo);
     font-size: var(--fontsize-titulo);
 }
 
-#projetos
+#projetos 
 {
     background-color: var(--color-marrom);
-    height: 80vh;
+    min-height: 80vh;
+    padding: 4%;
 }
 
-#projetos ul
+#projetos ul 
 {
     margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    place-items: center;
+    gap: 20px;
+    justify-items: center;
 }
 
-.card
+.card 
 {
-    margin-top: 20%;
+    margin-top: 20px;
     max-width: 300px;
-    height: 420px;
+    height: auto;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.image-wrapper
+.card:hover 
+{
+    transform: translateY(-5px);
+}
+
+.card img 
 {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transition: opacity .5s;
+    height: auto;
+    object-fit: cover;
 }
 
-.image-wrapper img
+.image-wrapper img 
 {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card-text
+.card-text 
 {
     position: absolute;
-    top: 30%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
     opacity: 0;
-    transition: opacity .5s, top .5s;
-    color: var(--color-branco);
-    margin-top: 80%;
+    transition: bottom 0.3s ease;
 }
 
-.card:hover .card-text
+.card:hover .card-text 
 {
     opacity: 1;
-    top: 15%
+    top: 15%;
 }
 
-.card:hover .image-wrapper
+.card:hover .image-wrapper 
 {
     opacity: .3;
 }
 
 #orcamento 
 {
-    height: 100vh;
-    padding: 3rem;
+    padding: 3%;
 }
 
 #orcamento h2 
@@ -174,33 +188,18 @@ header h2
     text-align: center;
 }
 
-#orcamento form
+#orcamento form 
 {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
     max-width: 500px;
     margin: 0 auto;
     border: 0.2rem solid var(--color-marrom);
-    padding: 2rem; 
-    font-size: 1.2rem; 
-}
-
-
-.cores
-{
-    margin-right: 5%;
-}
-
-label 
-{
-    display: block;
-    margin-bottom: 5px;
+    padding: 2rem;
+    font-size: 1.2rem;
 }
 
 .cores 
 {
-    text-align: center; /* Alinha os itens ao centro */
+    text-align: center;
 }
 
 .cor-azul,
@@ -209,11 +208,9 @@ label
 .cor-vermelho 
 {
     display: inline-block;
-    align-content: center;
-    grid-column: 1 / 3;
-    width: 1.5rem; 
-    height: 1.5rem; 
-    margin-right: 0.2rem; 
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.2rem;
     border: 1px solid black;
     border-radius: 4px;
 }
@@ -241,7 +238,7 @@ label
     display: inline-block;
     width: 20%;
     text-align: center;
-    margin-right: 2%; 
+    margin-right: 2%;
 }
 
 .linha 
@@ -250,13 +247,13 @@ label
     grid-column: 1 / 4;
 }
 
-#valorTenis
+#valorTenis 
 {
     margin-top: 3%;
 }
 
 input[type=range],
-input[type=radio]    
+input[type=radio] 
 {
     accent-color: var(--color-laranja);
 }
